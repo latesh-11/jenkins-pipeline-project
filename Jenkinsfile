@@ -27,6 +27,10 @@ pipeline{
             }
         }
         stage("Deploy on prod"){
+            input{
+                message "want to deploy on production"
+                ok "yes"
+            }
             steps{
                 //deploy on container -> plugin
                 deploy adapters: [tomcat9(credentialsId: '91952ba5-466f-4339-877c-c1f55b5550d2', path: '', url: 'http://43.207.40.87:8080')], contextPath: '/app', war: '**/*.war'
