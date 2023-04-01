@@ -1,5 +1,5 @@
 # Spring Boot Hello World Example Project.
-
+# deploying simple java app by shell script on tomcat
 
 - check is user a root user.
 - apt-get update
